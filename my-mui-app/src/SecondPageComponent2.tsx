@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 
+
 interface Department {
   department: string;
   sub_departments: string[];
@@ -105,6 +106,7 @@ useEffect(() => {
     level: number = 0
   ) => {
     return departments.map((dept) => (
+      
       <React.Fragment key={dept.department}>
         <ListItem style={{ marginLeft: `${level * 3}rem` }}>
           {dept.sub_departments && dept.sub_departments.length > 0 && (
@@ -135,6 +137,7 @@ useEffect(() => {
           </Collapse>
         )}
       </React.Fragment>
+     
     ));
   };
 
